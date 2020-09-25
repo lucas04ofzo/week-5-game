@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bad Minecraft</title>
+<head>
+<body>
+<script>
+	var PlayerName = prompt("What is your name?");
+	var CreateWorld = prompt("Welcome to Bad Minecraft, " + PlayerName + "!" + " Create world? -Answer in 'yes' or something else.");
+	if(CreateWorld == "yes"){
+		alert("Creating World... -Press 'OK' or Enter to continue.");
+		var MineTree = prompt("Do you want to mine a tree? -Answer in 'yes' or something else.");
+		if(MineTree == "yes"){
+			alert("You have obtained 5 Oak Logs from the tree. -Press 'OK' or Enter to continue.");
+			var OakPlanks = prompt("Do you want to craft the 5 Oak Logs into 20 Oak Planks? -Answer in 'yes' or something else.");
+			if(OakPlanks == "yes"){
+				alert("You now have 20 Oak Planks in your Inventory. -Press 'OK' or Enter to continue.");
+				var CraftingTable = prompt("Do you you want to use 4 Oak Logs to craft a Crafting Table? It can be used to craft tools and others. -Answer in 'yes' or something else.");
+				if(CraftingTable == "yes"){
+					alert("You now have a Crafting Table in your Inventory. -Press 'OK' or Enter to continue.");
+					var CraftingInterface = prompt("Do you want to place the Crafting Table on the ground and start crafting tools? -Answer in 'yes' or something else.");
+					if(CraftingInterface == "yes"){
+						var CraftingTools = prompt("Do you want to craft a Wooden Sword or a Wooden Pickaxe? -Answer in 'sword' or something else.");
+						if(CraftingTools == "Sword"){
+							alert("You now have a Wooden Sword in your inventory and to be safe you put it in your hand ready to fight off any danger. -Press 'OK' or Enter to continue.")
+							var AttackMob = prompt("You are being attacked by a Zombie! A Zombie has 20 health and your Wooden Sword does 4 damage, how many times do you want to attack the zombie? -Answer in a number.");
+						}
+						else{
+
+						}
+					}
+					else{
+
+					}
+				}
+				else{
+
+				}
+			}
+			else{
+
+			}
+		}
+		else{
+
+		}
+	}
+	else{
+		alert("Bye! (Press Ctrl + R to play again)");
+	}
+</script>
+</body>
+</html>
