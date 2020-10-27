@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bad Minecraft</title>
+	<title>Some Stupid Math Game</title>
 <head>
 <body>
 <script>
+//uitleg
 	var PlayerName = prompt("What is your name?");
-	var CreateWorld = prompt("Welcome to Bad Minecraft, " + PlayerName + "!" + " Create world? -Answer in 'yes' or something else.");
-	if(CreateWorld == "yes"){
-		alert("Creating World... -Press 'OK' or Enter to continue.");
-		var MineTree = prompt("Do you want to mine a tree? -Answer in 'yes' or something else.");
-		if(MineTree == "yes"){
-			alert("You have obtained 5 Oak Logs from the tree. -Press 'OK' or Enter to continue.");
-			var OakPlanks = prompt("Do you want to craft the 5 Oak Logs into 20 Oak Planks? -Answer in 'yes' or something else.");
-			if(OakPlanks == "yes"){
-				alert("You now have 20 Oak Planks in your Inventory. -Press 'OK' or Enter to continue.");
-				var CraftingTable = prompt("Do you you want to use 4 Oak Logs to craft a Crafting Table? It can be used to craft tools and others. -Answer in 'yes' or something else.");
-				if(CraftingTable == "yes"){
-					alert("You now have a Crafting Table in your Inventory. -Press 'OK' or Enter to continue.");
-					var CraftingInterface = prompt("Do you want to place the Crafting Table on the ground and start crafting tools? -Answer in 'yes' or something else.");
-					if(CraftingInterface == "yes"){
-						var CraftingTools = prompt("Do you want to craft a Wooden Sword or a Wooden Pickaxe? -Answer in 'sword' or something else.");
-						if(CraftingTools == "Sword"){
-							alert("You now have a Wooden Sword in your inventory and to be safe you put it in your hand ready to fight off any danger. -Press 'OK' or Enter to continue.")
-							var AttackMob = prompt("You are being attacked by a Zombie! A Zombie has 20 health and your Wooden Sword does 4 damage, how many times do you want to attack the zombie? -Answer in a number.");
-						}
-						else{
+	alert("Welcome to SSMG, " + PlayerName + "! These are the rules: Try to keep your number in between 1 and 20 at all times. If after 5 choices your number is still in between 1 and 20, you've won. Good luck! Side note: - is retracting, + is applying, / is dividing, * is multiplying");
 
-						}
-					}
-					else{
-
-					}
-				}
-				else{
-
-				}
-			}
-			else{
-
-			}
+//keuzes
+	var number = prompt("Chose a number between 1 and 20 to start with:");
+	if(number <= 10){
+		var FirstChoice = prompt("Your number is now " + number + ". First choice: -7 or +7");
+		if(FirstChoice == "-7"){
+			//
+		}else if(FirstChoice == "+7"){
+			//
+		}else{
+			alert("Invalid number. Press 'Ctrl' + 'R' to play again");
 		}
-		else{
-
+	}else if(number > 10){
+		var FirstChoice = prompt("Your number is now " + number + ". First choice: -6 or +6");
+		if(FirstChoice == "-6"){
+			//
+		}else if(FirstChoice == "+6"){
+			//
+		}else{
+			alert("Invalid number. Press 'Ctrl' + 'R' to play again");
 		}
 	}
-	else{
-		alert("Bye! (Press Ctrl + R to play again)");
+
+//einde
+	if(number > 20){
+		alert(number + " is a higher number than 20, you lose. Press 'Ctrl' + 'R' to play again");
+	}else if(number < 1){
+		alert(number + " is a lower number than 1, you lose. Press 'Ctrl' + 'R' to play again");
+	}else{
+		alert("Congratulations! You managed to keep your number in between 1 and 20 for 5 rounds! Your number: " + number + ". Your prize: permission to high-five yourself! :D");
 	}
 </script>
 </body>
