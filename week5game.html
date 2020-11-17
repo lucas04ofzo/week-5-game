@@ -5,40 +5,72 @@
 <head>
 <body>
 <script>
-//uitleg
-	var PlayerName = prompt("What is your name?");
-	alert("Welcome to SSMG, " + PlayerName + "! These are the rules: Try to keep your number in between 1 and 20 at all times. If after 5 choices your number is still in between 1 and 20, you've won. Good luck! Side note: - is retracting, + is applying, / is dividing, * is multiplying");
 
-//keuzes
-	var number = prompt("Chose a number between 1 and 20 to start with:");
-	if(number <= 10){
-		var FirstChoice = prompt("Your number is now " + number + ". First choice: -7 or +7");
-		if(FirstChoice == "-7"){
-			//
-		}else if(FirstChoice == "+7"){
-			//
-		}else{
-			alert("Invalid number. Press 'Ctrl' + 'R' to play again");
-		}
-	}else if(number > 10){
-		var FirstChoice = prompt("Your number is now " + number + ". First choice: -6 or +6");
-		if(FirstChoice == "-6"){
-			//
-		}else if(FirstChoice == "+6"){
-			//
-		}else{
-			alert("Invalid number. Press 'Ctrl' + 'R' to play again");
-		}
-	}
+var number = prompt("Welcome to SSMG, player! These are the rules: Try to keep your number in between 1 and 20. If after 3 choices your number is in between 1 and 20, you've won. Good luck! Side note: - is retracting, / is dividing, * is multiplying. Choose any number above 0 to start with:");
 
-//einde
-	if(number > 20){
-		alert(number + " is a higher number than 20, you lose. Press 'Ctrl' + 'R' to play again");
-	}else if(number < 1){
-		alert(number + " is a lower number than 1, you lose. Press 'Ctrl' + 'R' to play again");
+var FirstChoice = prompt("Your number is now " + number + ". First choice: -10 or -5");
+if(FirstChoice == "-10"){
+	number = (number - 10);
+	var SecondChoice = prompt("Your number is now " + number + ". Second choice: /5 or *5");
+	if(SecondChoice == "/5"){
+		number = (number / 5);
+		var ThirdChoice = prompt("Your number is now " + number + ". Third choice: -15 or *3");
+		if(ThirdChoice == "-15"){
+			number = (number - 15);
+		}else if(ThirdChoice == "*3"){
+			number = (number * 3);
+		}else{
+			alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
+		}
+	}else if(SecondChoice == "*5"){
+		number = (number * 5);
+		var ThirdChoice = prompt("Your number is now " + number + ". Third choice: -17 or *2");
+		if(ThirdChoice == "-17"){
+			number = (number - 17);
+		}else if(ThirdChoice == "*2"){
+			number = (number * 2);
+		}else{
+			alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
+		}
 	}else{
-		alert("Congratulations! You managed to keep your number in between 1 and 20 for 5 rounds! Your number: " + number + ". Your prize: permission to high-five yourself! :D");
+		alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
 	}
+}else if(FirstChoice == "-5"){
+	number = (number - 5);
+	var SecondChoice = prompt("Your number is now " + number + ". Second choice: *4 or /4");
+	if(SecondChoice == "*4"){
+		number = (number * 4);
+		var ThirdChoice = prompt("Your number is now " + number + ". Third choice: -14 or -8");
+		if(ThirdChoice == "-14"){
+			number = (number - 14);
+		}else if(ThirdChoice == "-8"){
+			number = (number - 8);
+		}else{
+			alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
+		}
+	}else if(SecondChoice == "/4"){
+		number = (number / 4);
+		var ThirdChoice = prompt("Your number is now " + number + ". Third choice: -12 or *2");
+		if(ThirdChoice == "-12"){
+			number = (number - 12);
+		}else if(ThirdChoice == "*2"){
+			number = (number * 2);
+		}else{
+			alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
+		}
+	}else{
+		alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
+	}
+}else{
+	alert("Invalid number. Press 'Ctrl' + 'R' simultaneously to play again.");
+}
+
+		if(number > 0 && number < 21){
+			alert("Congratulations! You managed to keep your number in between 1 and 20 for 5 rounds! Your number: " + number + ". Your prize: permission to high-five yourself! :D. Press 'Ctrl' + 'R' simultaneously if you want to play again.");
+		}else{
+			alert("Your number was " + number + " which is not in between 1 and 20. You lost. Press 'Ctrl' + 'R' simultaneously to play again.");
+		}
+
 </script>
 </body>
 </html>
